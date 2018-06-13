@@ -29,3 +29,7 @@ public class InitializerApplication
 
 This works as a main application class and in integration tests
 because the same `BeanDefinitionLoader` is used.
+
+There is also a custom `AutoConfigurationImportSelectorAutoConfigurationImportSelector` 
+which looks at autoconfig classes to see if they are `ApplicationContextInitializer`. If 
+so the initializer is applied to the current context and the autoimport is cancelled.
